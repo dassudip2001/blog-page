@@ -1,0 +1,23 @@
+/* .btn {
+    min-width: 250px;
+} */
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+           
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif; 
+        /* background-color: #191e30; */
+}
+
+.logo{
+    height: 20px;
+    width: 20px;
+}
