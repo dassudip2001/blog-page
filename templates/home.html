@@ -42,7 +42,7 @@
 </div>
 </div>
 
-
+   
 
 <!-- cards -->
 {% for student in posts %}
@@ -56,12 +56,27 @@
     <div class="card-body">
       <h5 class="card-title"></h5>
       <!-- <td class="col-md-1"><img id="IMG" src="  ></td>  -->
-      <p class="card-text"><small class="text-muted">{{ student.Body }} </small></p>
+      <p class="card-text"><small class="text-muted">{{ student.Body | safe }} </small></p>
     </div>
   </div>
  
 </div>
 </div>
+
+<div class="card text-center">
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14751.685293205588!2d87.2978852!3d22.4319869!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28ceb88fbd64b1d0!2sVidyasagar%20University!5e0!3m2!1sen!2sin!4v1669608335701!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+  </div>
+  
+</div>
+<!-- google map -->
+<div class="container m-auto">
+   
+ </div>
 {% endfor %}
 
 {% endblock body %}
