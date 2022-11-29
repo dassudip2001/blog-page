@@ -1,84 +1,109 @@
-{% extends 'index.html' %}
-
-{% block title %}Home{% endblock title %}
-
+{% extends 'index.html' %} 
+{% block title %} Home {% endblock title %} 
 {% block body %}
 <!-- <div class="container-fluid mt-1"> -->
-    
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../static/background/image1.jpg" class="d-block w-100" alt="..." height="600px">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/background/image2.jpg" class="d-block w-100" alt="..." height="600px">
-          </div>
-          <div class="carousel-item">
-            <img src="../static/background/image3.jpg" class="d-block w-100" alt="..." height="600px">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-<!-- </div> -->
+<div class="container">
+<div
+  id="carouselExampleControls"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="../static/background/commerce2.jpg"
+        class="d-block w-100"
+        alt="..."
+        height="600px"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="../static/background/commerce4.jpg"
+        class="d-block w-100"
+        alt="..."
+        height="600px"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="../static/background/commerce5.jpg"
+        class="d-block w-100"
+        alt="..."
+        height="600px"
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
 <!-- card-header -->
 <div class="container mt-3">
   <div class="card text-center">
-  <div class="card-header">
-    About University
+    <div class="card-header"><h3>About the Department</h3></div>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Special title treatment</h5> -->
+      <p class="card-text lh-sm">
+       Vidyasagar University is a reputed University in the Eastern region of India which started its academic activities in 1985. The Department of Commerce is among the oldest in the university which has been imparting higher education for more than three decades. At present, the department offers M.Com. and Ph.D degrees. Presently, it has seven full time faculty members, each of whom have a Doctoral degree. The department regularly publishes its annual journal, “Vidyasagar University Journal of Commerce” bearing ISSN 0973-5917 which is indexed with Citefactor.org and EBSCO. The 27th volume will be released very soon. The department has already conducted three research methodology workshops. This year it will organize the twenty seventh annual conference.
+      </p>
+      <!-- <a href="#" class="btn btn-primary">Read more......</a> -->
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Read more......</a>
-  </div>
-  
 </div>
-</div>
-
-   
 
 <!-- cards -->
 {% for student in posts %}
 <div class="container mt-2">
   <div class="card-group">
-  <div class="card">
-    <div class="card-title">
-      <h5 class="mt-4 m-4">{{ student.title }}</h5>
-    </div>
-    <img src="{{student.photo.url}}" class="card-img-top" alt="..." height="90%" width="400px">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <!-- <td class="col-md-1"><img id="IMG" src="  ></td>  -->
-      <p class="card-text"><small class="text-muted">{{ student.Body | safe }} </small></p>
+    <div class="card">
+      <div class="card-title">
+        <h5 class="mt-4 m-4">{{ student.title }}</h5>
+      </div>
+      <img
+        src="{{student.photo.url}}"
+        class="card-img-top"
+        alt="..."
+        height="90%"
+        width="400px"
+      />
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <!-- <td class="col-md-1"><img id="IMG" src="  ></td>  -->
+        <p class="card-text">
+          <small class="text-muted">{{ student.Body | safe }} </small>
+        </p>
+      </div>
     </div>
   </div>
- 
-</div>
 </div>
 
-<div class="card text-center">
-  <div class="card-header">
-    
-  </div>
-  <div class="card-body">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14751.685293205588!2d87.2978852!3d22.4319869!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28ceb88fbd64b1d0!2sVidyasagar%20University!5e0!3m2!1sen!2sin!4v1669608335701!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
-  </div>
-  
-</div>
-<!-- google map -->
-<div class="container m-auto">
-   
- </div>
+
 {% endfor %}
 
+
+<div class="container mt-2">
+ 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14751.685293205588!2d87.2978852!3d22.4319869!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28ceb88fbd64b1d0!2sVidyasagar%20University!5e0!3m2!1sen!2sin!4v1669608335701!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+
+     
+</div>
+
+
 {% endblock body %}
-
-
